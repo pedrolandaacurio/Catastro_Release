@@ -10,6 +10,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Data.SqlClient;
 
 namespace catastro_release
 {
@@ -52,6 +53,10 @@ namespace catastro_release
                 um.Create(user, "123456");
                 um.AddToRole(user.Id, "Administrador");
             }
+
+            //Probando sentencias de creación de tablas de catastro (sin model)
+            var create_fichaindividual = new SqlCommand("CREATE TABLE DatosGenerales (Cuc char(12) )");
+
         }
     }
 }
