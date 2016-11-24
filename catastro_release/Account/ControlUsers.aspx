@@ -12,7 +12,7 @@
             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" Visible="false"></asp:BoundField>
             <asp:BoundField DataField="Name" HeaderText="Rol" SortExpression="Name" ></asp:BoundField>
 
-            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" ButtonType="Button"></asp:CommandField>
+            <asp:CommandField ShowEditButton="True" ControlStyle-CssClass="btn btn-xs" ShowDeleteButton="True" ButtonType="Button"></asp:CommandField>
         </Columns>
     </asp:GridView>
 
