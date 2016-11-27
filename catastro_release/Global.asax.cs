@@ -55,7 +55,7 @@ namespace catastro_release
             }
 
             //Probando sentencias de creación de tablas de catastro (sin model)
-            var create_fichaindividual = new SqlCommand("CREATE TABLE DatosGenerales (Cuc char(12) )");
+            //var create_fichaindividual = new SqlCommand("CREATE TABLE DatosGenerales (Cuc char(12) )");
 
         }
     }
