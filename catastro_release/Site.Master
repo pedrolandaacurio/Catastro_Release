@@ -76,6 +76,7 @@
                                     <a class="dropdown-toggle" role="button" aria-expanded="true" href="#" data-toggle="dropdown">Fichas Catastrales <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a runat="server" href="~/Fichas/FichaIndividual">Ficha Individual</a></li>
+                                        <li><a runat="server" href="~/Fichas/Ficha">Ficha C#</a></li>
                                     </ul>
                                 </li>
                                 <li><a runat="server">Reportes</a></li>

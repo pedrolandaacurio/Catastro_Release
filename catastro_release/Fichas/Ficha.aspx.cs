@@ -24,7 +24,7 @@ namespace catastro_release.Fichas
                 //Ficha Individual General
                 SqlCommand cmdFicha = sc.CreateCommand();
                 cmdFicha.CommandType = System.Data.CommandType.Text;
-                cmdFicha.CommandText = "insert into dbo.FichaIndividual (Cuc, UserName) values ('" + Cuc.Text + "','"+ User.Identity.GetUserName() + "')";
+            cmdFicha.CommandText = "insert into dbo.FichaIndividual (Cuc, SelloTiempo, UserName) values ('" + Cuc.Text + "','" + DateTime.Now.ToString("yyy-MM-dd HH:mm:ss") + "','" + User.Identity.GetUserName() + "')";
                 cmdFicha.ExecuteNonQuery();
 
                 //Insertado UserName
