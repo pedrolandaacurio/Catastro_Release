@@ -480,12 +480,69 @@
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="CodigoHU" CssClass="form-control"></asp:TextBox>
                                 </div>
+                                <asp:Label runat="server" AssociatedControlID="NombreHU" CssClass="control-label col-md-2">Nombre de la HU</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:TextBox runat="server" ID="NombreHU" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" AssociatedControlID="ZonSecEta" CssClass="control-label col-md-2">Zona/Sector/Etapa</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:TextBox runat="server" ID="ZonSecEta" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <asp:Label runat="server" AssociatedControlID="Manzana" CssClass="control-label col-md-2">Manzana</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:TextBox runat="server" ID="Manzana" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" AssociatedControlID="Lote" CssClass="control-label col-md-2">Lote</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:TextBox runat="server" ID="Lote" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <asp:Label runat="server" AssociatedControlID="SubLote" CssClass="control-label col-md-2">Sub-Lote</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:TextBox runat="server" ID="SubLote" CssClass="form-control"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default" id="CaracteristicasTitular">
                         <div class="panel-heading">Características de la Titularidad</div>
                         <div class="panel-body">
+                            <div class="form-group">
+                                <asp:Label runat="server" AssociatedControlID="CondTit" CssClass="control-label col-md-2">Condición Especial del Titular</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:DropDownList runat="server" ID="CondTit" CssClass="form-control">
+                                        <asp:ListItem Value="01" Text="Propietario Único"></asp:ListItem>
+                                        <asp:ListItem Value="02" Text="Sucesión Intestada"></asp:ListItem>
+                                        <asp:ListItem Value="03" Text="Poseedor"></asp:ListItem>
+                                        <asp:ListItem Value="04" Text="Sociedad Conyugal"></asp:ListItem>
+                                        <asp:ListItem Value="05" Text="Cotitularidad"></asp:ListItem>
+                                        <asp:ListItem Value="06" Text="Litigio"></asp:ListItem>
+                                        <asp:ListItem Value="07" Text="Otros..."></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                                <!--Aqui debe ir un textbox de especificacion-->
+                                <asp:Label runat="server" AssociatedControlID="FormaAdquisicion" CssClass="control-label col-md-2">Forma de Adquisición</asp:Label>
+                                <div class="col-md-4">
+                                    <asp:DropDownList runat="server" ID="FormaAdquisicion" CssClass="form-control">
+                                        <asp:ListItem Value="01" Text="Compra Venta"></asp:ListItem>
+                                        <asp:ListItem Value="02" Text="Anticipo Legítima"></asp:ListItem>
+                                        <asp:ListItem Value="03" Text="Testamento"></asp:ListItem>
+                                        <asp:ListItem Value="04" Text="Donación"></asp:ListItem>
+                                        <asp:ListItem Value="05" Text="Adjudicación"></asp:ListItem>
+                                        <asp:ListItem Value="06" Text="Fusión"></asp:ListItem>
+                                        <asp:ListItem Value="07" Text="Expropiación"></asp:ListItem>
+                                        <asp:ListItem Value="08" Text="Permuta"></asp:ListItem>
+                                        <asp:ListItem Value="09" Text="Prescripción Adquisitiva"></asp:ListItem>
+                                        <asp:ListItem Value="10" Text="Ces. Der./Acciones"></asp:ListItem>
+                                        <asp:ListItem Value="11" Text="Dación Pago"></asp:ListItem>
+                                        <asp:ListItem Value="12" Text="Decl. Herederos"></asp:ListItem>
+                                        <asp:ListItem Value="13" Text="Otro.."></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="panel panel-default" id="Descripcion">
