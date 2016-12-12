@@ -43,5 +43,6 @@ namespace catastro_release.Fichas
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Exitosamente grabado')", true);
         }
 
+
     }
 }

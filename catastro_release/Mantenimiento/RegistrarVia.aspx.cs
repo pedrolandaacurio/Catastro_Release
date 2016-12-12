@@ -29,13 +29,13 @@ namespace catastro_release.Mantenimiento
 
         protected void InsertButton_Click(object sender, EventArgs e)
         {
-            //ClientScript.RegisterStartupScript
-              //  (
-                    //this.GetType(),
-                    //"Alert",
-                    //"alert('Wrong verification code'); window.location.reload();",
-                    //true
-                //);
+            ClientScript.RegisterStartupScript
+              (
+                    this.GetType(),
+                    "Alert",
+                    "alert('Registro exitoso'); window.location.reload();",
+                    true
+                );
         }
     }
 }

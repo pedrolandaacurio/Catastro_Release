@@ -1,129 +1,6 @@
 ﻿<%@ Page Title="Ficha Individual Urbana Catastral" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ficha.aspx.cs" Inherits="catastro_release.Fichas.Ficha" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style type="text/css">
-        /* There is no gutter between date, month and year fields */
-        .row.no-gutter {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-            .row.no-gutter .form-control-feedback {
-                right: 0;
-            }
-
-            .row.no-gutter [class*='col-']:not(:first-child) input {
-                border-left: none;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-
-            .row.no-gutter [class*='col-']:not(:last-child) input {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-
-            .row.no-gutter [class*='col-']:not(:first-child),
-            .row.no-gutter [class*='col-']:not(:last-child) {
-                padding-right: 0;
-                padding-left: 0;
-            }
-    </style>
-    <script>
-        function AgregarEstructura() {
-            var table = document.getElementById("ConstruccionesBulk");
-            var row = table.insertRow(1);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-            var cell6 = row.insertCell(5);
-            var cell7 = row.insertCell(6);
-            var cell8 = row.insertCell(7);
-            var cell9 = row.insertCell(8);
-            var cell10 = row.insertCell(9);
-            var cell11 = row.insertCell(10);
-            var cell12 = row.insertCell(11);
-            var cell13 = row.insertCell(12);
-            var cell14 = row.insertCell(13);
-            var cell15 = row.insertCell(14);
-            var cell16 = row.insertCell(15);
-
-            var textCell1 = document.getElementById("In_NumPisoSotanoMezz");
-            var textCell2 = document.getElementById("In_FechaConstruccion");
-            var textCell3 = document.getElementById("In_MEP");
-            var textCell4 = document.getElementById("In_ECS");
-            var textCell5 = document.getElementById("In_ECC");
-            var textCell6 = document.getElementById("In_MurosyColumnas");
-            var textCell7 = document.getElementById("In_Techos");
-            var textCell8 = document.getElementById("In_Pisos");
-            var textCell9 = document.getElementById("In_PuertasVentanas");
-            var textCell10 = document.getElementById("In_Revestimiento");
-            var textCell11 = document.getElementById("In_Banos");
-            var textCell12 = document.getElementById("In_InstalacionesElectricas");
-            var textCell13 = document.getElementById("In_AreaConsDeclarada");
-            var textCell14 = document.getElementById("In_AreaConsVerificada");
-            var textCell15 = document.getElementById("In_UCA");
-
-            cell1.innerHTML = textCell1.value;
-            cell2.innerHTML = textCell2.value;
-            cell3.innerHTML = textCell3.value;
-            cell4.innerHTML = textCell4.value;
-            cell5.innerHTML = textCell5.value;
-            cell6.innerHTML = textCell6.value;
-            cell7.innerHTML = textCell7.value;
-            cell8.innerHTML = textCell8.value;
-            cell9.innerHTML = textCell9.value;
-            cell10.innerHTML = textCell10.value;
-            cell11.innerHTML = textCell11.value;
-            cell12.innerHTML = textCell12.value;
-            cell13.innerHTML = textCell13.value;
-            cell14.innerHTML = textCell14.value;
-            cell15.innerHTML = textCell15.value;
-            cell16.innerHTML = '<input type="button" class="btn btn-default btn-xs" value="Eliminar" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);">';
-
-            document.getElementById("In_NumPisoSotanoMezz").value = "";
-            document.getElementById("In_FechaConstruccion").value = "";
-            document.getElementById("In_MEP").value = "";
-            document.getElementById("In_ECS").value = "";
-            document.getElementById("In_ECC").value = "";
-            document.getElementById("In_MurosyColumnas").value = "";
-            document.getElementById("In_Techos").value = "";
-            document.getElementById("In_Pisos").value = "";
-            document.getElementById("In_PuertasVentanas").value = "";
-            document.getElementById("In_Revestimiento").value = "";
-            document.getElementById("In_Banos").value = "";
-            document.getElementById("In_InstalacionesElectricas").value = "";
-            document.getElementById("In_AreaConsDeclarada").value = "";
-            document.getElementById("In_AreaConsVerificada").value = "";
-            document.getElementById("In_UCA").value = "";
-
-            return false;
-        }
-
-        function deleteRow(row) {
-            var i = row.parentNode.parentNode.rowIndex;
-            document.getElementById('tablaubicacion_html').deleteRow(i);
-        }
-
-
-        function insRow() {
-            console.log('hi');
-            var x = document.getElementById('tablaubicacion_html');
-            var new_row = x.rows[1].cloneNode(true);
-            var len = x.rows.length;
-            new_row.cells[0].innerHTML = len;
-
-            var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-            inp1.id += len;
-            inp1.value = '';
-            var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-            inp2.id += len;
-            inp2.value = '';
-            x.appendChild(new_row);
-        }
-
-    </script>
+   
     <div class="form-horizontal">
         <fieldset>
             <legend>Ficha Catastral Urbana Individual</legend>
@@ -148,17 +25,17 @@
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Cuc" CssClass="control-label col-md-2">Código Único Catastral</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Cuc" CssClass="control-label col-md-2">Cód. Único Catastral <span class="badge">1</span></asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox ID="Cuc" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Chc" CssClass="control-label col-md-2">Código de Hoja Catastral</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Chc" CssClass="control-label col-md-2">Cód. de Hoja Catastral <span class="badge">2</span></asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Chc" CssClass="form-control" MaxLength="10"></asp:TextBox>
                         </div>
                     </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading">Código de Referencia Catastral</div>
+                        <div class="panel-heading">Cód. de Referencia Catastral <span class="badge">3</span></div>
                         <div class="panel-body">
                             <div class="row" id="CRC">
                                 <div class="col-lg-12 row no-gutter" runat="server">
@@ -203,15 +80,15 @@
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CodContribuyente" CssClass="control-label col-md-2">Cód. de Contribuyente</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodContribuyente" CssClass="control-label col-md-2">Cód. de Contribuyente <span class="badge">4</span></asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="CodContribuyente" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="CodPredial" CssClass="control-label col-md-2">Cód. Predial de Rentas</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodPredial" CssClass="control-label col-md-2">Cód. Predial de Rentas <span class="badge">5</span></asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="CodPredial" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="UnidadAcumulada" CssClass="control-label col-md-2">Unidad Acumulada al CPR</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="UnidadAcumulada" CssClass="control-label col-md-2">Und. Acum. al CPR <span class="badge">6</span></asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="UnidadAcumulada" CssClass="form-control"></asp:TextBox>
                         </div>
