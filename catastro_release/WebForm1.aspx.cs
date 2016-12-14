@@ -11,7 +11,12 @@ namespace catastro_release
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
+            
+        }
+
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

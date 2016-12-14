@@ -182,7 +182,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Fichas\Ficha.aspx" />
     <Content Include="Fichas\FichaIndividual.aspx" />
-    <Content Include="Fichas\WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -390,13 +389,6 @@
     </Compile>
     <Compile Include="Fichas\FichaIndividual.aspx.designer.cs">
       <DependentUpon>FichaIndividual.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Fichas\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Fichas\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

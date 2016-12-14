@@ -21,6 +21,7 @@
         </table>
         <hr />
         <input type="button" class="btn btn-primary" onclick="createRow()" value="Create Row" />
+        <input type="button" class="btn btn-primary" value="Ingresar" runat="server" onserverclick="Unnamed_ServerClick" />
     </div>
     <script lang="text/javascript">
         function createRow() {
