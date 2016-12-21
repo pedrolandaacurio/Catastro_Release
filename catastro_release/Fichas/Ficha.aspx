@@ -25,17 +25,17 @@
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Cuc" CssClass="control-label col-md-2">Cód. Único Catastral <span class="badge">1</span></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Cuc" CssClass="control-label col-md-2"><span class="badge">1</span> Cód. Único Catastral</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox ID="Cuc" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Chc" CssClass="control-label col-md-2">Cód. de Hoja Catastral <span class="badge">2</span></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Chc" CssClass="control-label col-md-2"><span class="badge">2</span> Cód. de Hoja Catastral</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Chc" CssClass="form-control" MaxLength="10"></asp:TextBox>
                         </div>
                     </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading">Cód. de Referencia Catastral <span class="badge">3</span></div>
+                        <div class="panel-heading"><span class="badge">3</span> Cód. de Referencia Catastral</div>
                         <div class="panel-body">
                             <div class="row" id="CRC">
                                 <div class="col-lg-12 row no-gutter" runat="server">
@@ -80,15 +80,15 @@
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CodContribuyente" CssClass="control-label col-md-2">Cód. de Contribuyente <span class="badge">4</span></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodContribuyente" CssClass="control-label col-md-2"><span class="badge">4</span> Cód. de Contribuyente</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="CodContribuyente" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="CodPredial" CssClass="control-label col-md-2">Cód. Predial de Rentas <span class="badge">5</span></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodPredial" CssClass="control-label col-md-2"><span class="badge">5</span> Cód. Predial de Rentas</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="CodPredial" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="UnidadAcumulada" CssClass="control-label col-md-2">Und. Acum. al CPR <span class="badge">6</span></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="UnidadAcumulada" CssClass="control-label col-md-2"><span class="badge">6</span> Und. Acum. al CPR</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="UnidadAcumulada" CssClass="form-control"></asp:TextBox>
                         </div>
@@ -105,27 +105,27 @@
                         <div class="panel-heading">Vías</div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table id="tablaubicacion_html" class="table">
+                                <table id="sections" class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <td>#</td>
-                                            <td>Código de Vía</td>
-                                            <td>Tipo de Vía</td>
-                                            <td>Nombre de Vía</td>
-                                            <td>Tipo de puerta</td>
-                                            <td>N° Municipal</td>
-                                            <td>Cond. Num.</td>
-                                            <td>N° Cert. Num.</td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><span class="badge">7</span> Código de Vía</td>
+                                            <td><span class="badge">8</span> Tipo de Vía</td>
+                                            <td><span class="badge">9</span> Nombre de Vía</td>
+                                            <td><span class="badge">10</span> Tipo de puerta</td>
+                                            <td><span class="badge">11</span> N° Municipal</td>
+                                            <td><span class="badge">12</span> Cond. Num.</td>
+                                            <td><span class="badge">13</span> N° Cert. Num.</td>
+                                            <td>Acción</td>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td><input class="form-control" id="Ubi_CodViaHTML" /></td>
-                                            <td><input class="form-control" id="Ubi_TipoViaHTML" /></td>
-                                            <td><input class="form-control" id="Ubi_NombreViaHTML" /></td>
+                                        <tr class="section">
+                                            <td>
+                                                <input class="form-control" id="Ubi_CodViaHTML" /></td>
+                                            <td>
+                                                <input class="form-control" id="Ubi_TipoViaHTML" /></td>
+                                            <td>
+                                                <input class="form-control" id="Ubi_NombreViaHTML" /></td>
                                             <td>
                                                 <select class="form-control" id="Ubi_TipoPuertaHTML">
                                                     <option value="P">Principal</option>
@@ -144,56 +144,26 @@
                                                     <option value="03">Generado por el Tec. Cat.</option>
                                                 </select>
                                             </td>
-                                            <td><input class="form-control" id="Ubi_NumCertHTML" /></td>
-                                            <td><input type="button" class="btn btn-default" id="anadir_ubi" value=" + " onclick="insRow()"/></td>
-                                            <td><input type="button" id="quitar_ubi" class="btn btn-danger" value=" - " onclick="deleteRow(this)"/></td>
+                                            <td>
+                                                <input class="form-control" id="Ubi_NumCertHTML" /></td>
+                                            <td>
+                                                <p><a href="#" class='remove'>Quitar</a></p>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <!--<asp:Table runat="server" ID="TableUbicacion" CssClass="table table-bordered">
-                                    <asp:TableHeaderRow>
-                                        <asp:TableHeaderCell>Código de Vía</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>Tipo de Vía</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>Nombre de Vía</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>Tipo de Puerta</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>N° Municipal</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>Cond. Num.</asp:TableHeaderCell>
-                                        <asp:TableHeaderCell>N° Cert. Num</asp:TableHeaderCell>
-                                    </asp:TableHeaderRow>
-                                    <asp:TableRow ID="PrimeraFila">
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_CodVia" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_TipoVia" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_NombreVia" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_TipoPuerta" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_NumMunicipal" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_ConNumMuni" CssClass="form-control" />
-                                        </asp:TableCell>
-                                        <asp:TableCell>
-                                            <asp:TextBox runat="server" ID="Ubi_NumCertNum" CssClass="form-control" />
-                                        </asp:TableCell>
-                                    </asp:TableRow>
-                                </asp:Table>
-                                <asp:Button runat="server" ID="AddRows" Text="Agregar fila" CssClass="btn btn-default btn-block" />-->
+                                <p><a href="#" class='addsection'>Añadir fila</a></p>
                             </div>
                         </div>
+                        <script src="../Scripts/jquery2.js"></script>
+                        <script src="../Scripts/app.js"></script>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Ubi_NombreEdificacion" CssClass="control-label col-md-2">Nombre de la Edificación</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_NombreEdificacion" CssClass="control-label col-md-2"><span class="badge">14</span> Nombre de la Edificación</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Ubi_NombreEdificacion" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Ubi_TipoEdificacion" CssClass="control-label col-md-2">Tipo de Edificación</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_TipoEdificacion" CssClass="control-label col-md-2"><span class="badge">15</span> Tipo de Edificación</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" CssClass="form-control" ID="Ubi_TipoEdificacion">
                                 <asp:ListItem Text="Block" Value="01"></asp:ListItem>
@@ -204,7 +174,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Ubi_TipoInterior" CssClass="control-label col-md-2">Tipo de Interior</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_TipoInterior" CssClass="control-label col-md-2"><span class="badge">16</span> Tipo de Interior</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="Ubi_TipoInterior" CssClass="form-control">
                                 <asp:ListItem Text="Departamento" Value="01"></asp:ListItem>
@@ -219,38 +189,38 @@
                                 <asp:ListItem Text="Otros" Value="10"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Ubi_NumInterior" CssClass="control-label col-md-2">Número de Interior</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_NumInterior" CssClass="control-label col-md-2"><span class="badge">17</span> Número de Interior</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Ubi_NumInterior" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Ubi_CodigoHU" CssClass="control-label col-md-2">Código HU</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_CodigoHU" CssClass="control-label col-md-2"><span class="badge">18</span> Código HU</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="Ubi_CodigoHU" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Ubi_NombreHU" CssClass="control-label col-md-2">Nombre de la HU</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_NombreHU" CssClass="control-label col-md-2"><span class="badge">19</span> Nombre de la HU</asp:Label>
                         <div class="col-md-6">
                             <asp:TextBox runat="server" ID="Ubi_NombreHU" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Ubi_ZonSecEta" CssClass="control-label col-md-2">Zona/Sector/Etapa</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_ZonSecEta" CssClass="control-label col-md-2"><span class="badge">20</span> Zona/Sector/Etapa</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Ubi_ZonSecEta" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Ubi_Manzana" CssClass="control-label col-md-2">Manzana</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_Manzana" CssClass="control-label col-md-2"><span class="badge">21</span> Manzana</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="Ubi_Manzana" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Ubi_Lote" CssClass="control-label col-md-2">Lote</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_Lote" CssClass="control-label col-md-2"><span class="badge">22</span> Lote</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="Ubi_Lote" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Ubi_SubLote" CssClass="control-label col-md-2">Sub-Lote</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Ubi_SubLote" CssClass="control-label col-md-2"><span class="badge">23</span> Sub-Lote</asp:Label>
                         <div class="col-md-2">
                             <asp:TextBox runat="server" ID="Ubi_SubLote" CssClass="form-control"></asp:TextBox>
                         </div>
@@ -262,7 +232,7 @@
                 <div class="panel-heading">Identificación del Titular Catastral</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="TipoTitular" CssClass="control-label col-md-2">Tipo de Titular</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="TipoTitular" CssClass="control-label col-md-2"><span class="badge">24</span> Tipo de Titular</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="TipoTitular" CssClass="form-control">
                                 <asp:ListItem Text="Persona Natural" Value="1"></asp:ListItem>
@@ -278,7 +248,7 @@
                                 <div class="panel-heading">Titular Nº 1</div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="EstadoCivil" CssClass="control-label col-md-2">Estado Civil</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="EstadoCivil" CssClass="control-label col-md-2"><span class="badge">25</span> Estado Civil</asp:Label>
                                         <div class="col-md-4">
                                             <asp:DropDownList runat="server" ID="EstadoCivil" CssClass="form-control">
                                                 <asp:ListItem Text="Soltero(a)" Value="01"></asp:ListItem>
@@ -291,7 +261,7 @@
                                     </div>
                                     <hr />
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit1_TipoDoc" CssClass="control-label col-md-2">Tipo de Documento</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit1_TipoDoc" CssClass="control-label col-md-2"><span class="badge">26</span> Tipo de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:DropDownList runat="server" ID="Tit1_TipoDoc" CssClass="form-control">
                                                 <asp:ListItem Text="No presentó documento" Value="01"></asp:ListItem>
@@ -304,23 +274,23 @@
                                                 <asp:ListItem Text="Otros" Value="08"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                        <asp:Label runat="server" AssociatedControlID="Tit1_NumDoc" CssClass="control-label col-md-2">Nº de Documento</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit1_NumDoc" CssClass="control-label col-md-2"><span class="badge">27</span> Nº de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit1_NumDoc" CssClass="form-control"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit1_Nombres" CssClass="control-label col-md-2">Nombres</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit1_Nombres" CssClass="control-label col-md-2"><span class="badge">28</span> Nombres</asp:Label>
                                         <div class="col-md-10">
                                             <asp:TextBox runat="server" ID="Tit1_Nombres" CssClass="form-control"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit1_ApePat" CssClass="control-label col-md-2">Apellido Paterno</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit1_ApePat" CssClass="control-label col-md-2"><span class="badge">29</span> Apellido Paterno</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit1_ApePat" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:Label runat="server" AssociatedControlID="Tit1_ApeMat" CssClass="control-label col-md-2">Apellido Materno</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit1_ApeMat" CssClass="control-label col-md-2"><span class="badge">30</span> Apellido Materno</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit1_ApeMat" CssClass="form-control"></asp:TextBox>
                                         </div>
@@ -331,7 +301,7 @@
                                 <div class="panel-heading">Titular Nº 2</div>
                                 <div class="panel-body">
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit2_TipoDoc" CssClass="control-label col-md-2">Tipo de Documento</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit2_TipoDoc" CssClass="control-label col-md-2"><span class="badge">26</span> Tipo de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:DropDownList runat="server" ID="Tit2_TipoDoc" CssClass="form-control">
                                                 <asp:ListItem Text="No presentó documento" Value="01"></asp:ListItem>
@@ -344,23 +314,23 @@
                                                 <asp:ListItem Text="Otros" Value="08"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                        <asp:Label runat="server" AssociatedControlID="Tit2_NumDoc" CssClass="control-label col-md-2">Nº de Documento</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit2_NumDoc" CssClass="control-label col-md-2"><span class="badge">27</span> Nº de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit2_NumDoc" CssClass="form-control"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit2_Nombres" CssClass="control-label col-md-2">Nombres</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit2_Nombres" CssClass="control-label col-md-2"><span class="badge">28</span> Nombres</asp:Label>
                                         <div class="col-md-10">
                                             <asp:TextBox runat="server" ID="Tit2_Nombres" CssClass="form-control"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label runat="server" AssociatedControlID="Tit2_ApePat" CssClass="control-label col-md-2">Apellido Paterno</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit2_ApePat" CssClass="control-label col-md-2"><span class="badge">29</span> Apellido Paterno</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit2_ApePat" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:Label runat="server" AssociatedControlID="Tit2_ApeMat" CssClass="control-label col-md-2">Apellido Materno</asp:Label>
+                                        <asp:Label runat="server" AssociatedControlID="Tit2_ApeMat" CssClass="control-label col-md-2"><span class="badge">30</span> Apellido Materno</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit2_ApeMat" CssClass="form-control"></asp:TextBox>
                                         </div>
@@ -373,19 +343,19 @@
                         <div class="panel-heading">Persona Jurírica</div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="RUC" CssClass="control-label col-md-2">RUC</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="RUC" CssClass="control-label col-md-2"><span class="badge">31</span> RUC</asp:Label>
                                 <div class="col-md-10">
                                     <asp:TextBox runat="server" ID="RUC" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="RazonSocial" CssClass="control-label col-md-2">Razón Social</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="RazonSocial" CssClass="control-label col-md-2"><span class="badge">32</span> Razón Social</asp:Label>
                                 <div class="col-md-10">
                                     <asp:TextBox runat="server" ID="RazonSocial" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="PersonaJuridica" CssClass="control-label col-md-2">Persona Jurídica</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="PersonaJuridica" CssClass="control-label col-md-2"><span class="badge">33</span> Persona Jurídica</asp:Label>
                                 <div class="col-md-4">
                                     <asp:DropDownList runat="server" ID="PersonaJuridica" CssClass="form-control">
                                         <asp:ListItem Value="01" Text="Empresa"></asp:ListItem>
@@ -395,7 +365,7 @@
                                         <asp:ListItem Value="05" Text="Otros"></asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
-                                <asp:Label runat="server" AssociatedControlID="CondEspTit" CssClass="control-label col-md-2">Condición Especial del Titular</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="CondEspTit" CssClass="control-label col-md-2"><span class="badge">34</span> Condición Especial del Titular</asp:Label>
                                 <div class="col-md-4">
                                     <asp:DropDownList runat="server" ID="CondEspTit" CssClass="form-control">
                                         <asp:ListItem Value="01" Text="Gobierno Central"></asp:ListItem>
@@ -419,21 +389,21 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="NumResExo" CssClass="control-label col-md-2">Nº de Resolución de Exoneración</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="NumResExo" CssClass="control-label col-md-2"><span class="badge">35</span> Nº de Resolución de Exoneración</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="NumResExo" CssClass="form-control"></asp:TextBox>
                                 </div>
-                                <asp:Label runat="server" AssociatedControlID="NumBoletaPension" CssClass="control-label col-md-2">Nº de Boleta de Pensionista</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="NumBoletaPension" CssClass="control-label col-md-2"><span class="badge">36</span> Nº de Boleta de Pensionista</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="NumBoletaPension" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="InicioExo" CssClass="control-label col-md-2">Inicio de la Exoneración</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="InicioExo" CssClass="control-label col-md-2"><span class="badge">37</span> Inicio de la Exoneración</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="InicioExo" CssClass="form-control" TextMode="Date"></asp:TextBox>
                                 </div>
-                                <asp:Label runat="server" AssociatedControlID="FinExo" CssClass="control-label col-md-2">Fin de la Exoneración</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="FinExo" CssClass="control-label col-md-2"><span class="badge">38</span> Fin de la Exoneración</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="FinExo" CssClass="form-control" TextMode="Date"></asp:TextBox>
                                 </div>
@@ -473,38 +443,38 @@
                         <asp:CheckBox runat="server" CssClass="form-control" ID="CopiarDireccion" Text=" ¿Misma dirección que el predio?" />
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Dpto" CssClass="control-label col-md-2">Departamento</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Dpto" CssClass="control-label col-md-2"><span class="badge">39</span> Departamento</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Dpto" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Prov" CssClass="control-label col-md-2">Provincia</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Prov" CssClass="control-label col-md-2"><span class="badge">40</span> Provincia</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Prov" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Dist" CssClass="control-label col-md-2">Distrito</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Dist" CssClass="control-label col-md-2"><span class="badge">41</span> Distrito</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Dist" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Telf" CssClass="control-label col-md-2">Teléfono</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Telf" CssClass="control-label col-md-2"><span class="badge">42</span> Teléfono</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Telf" CssClass="form-control" TextMode="Phone"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Anexo" CssClass="control-label col-md-2">Anexo</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Anexo" CssClass="control-label col-md-2"><span class="badge">43</span> Anexo</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Anexo" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Fax" CssClass="control-label col-md-2">Fax</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Fax" CssClass="control-label col-md-2"><span class="badge">44</span> Fax</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Fax" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="control-label col-md-2">Email</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="control-label col-md-2"><span class="badge">45</span> Email</asp:Label>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <span class="input-group-addon">@</span>
@@ -514,11 +484,11 @@
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CodVia" CssClass="control-label col-md-2">Código de Vía</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodVia" CssClass="control-label col-md-2"><span class="badge">7</span> Código de Vía</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="CodVia" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="TipoVia" CssClass="control-label col-md-2">Tipo de Vía</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="TipoVia" CssClass="control-label col-md-2"><span class="badge">8</span> Tipo de Vía</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="TipoVia" CssClass="form-control">
                                 <asp:ListItem Value="AV" Text="Avenida"></asp:ListItem>
@@ -535,54 +505,54 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="NombreVia" CssClass="control-label col-md-2">Nombre de Via</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NombreVia" CssClass="control-label col-md-2"><span class="badge">9</span> Nombre de Via</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="NombreVia" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="NumMunicipal" CssClass="control-label col-md-2">Nº Municipal</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NumMunicipal" CssClass="control-label col-md-2"><span class="badge">11</span> Nº Municipal</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NumMunicipal" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="NombreEdificacion" CssClass="control-label col-md-2">Nombre de Edificación</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NombreEdificacion" CssClass="control-label col-md-2"><span class="badge">14</span> Nombre de Edificación</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NombreEdificacion" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="NumInterior" CssClass="control-label col-md-2">Nº Interior</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NumInterior" CssClass="control-label col-md-2"><span class="badge">17</span> Nº Interior</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NumInterior" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <hr />
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CodigoHU" CssClass="control-label col-md-2">Código de HU</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodigoHU" CssClass="control-label col-md-2"><span class="badge">18</span> Código de HU</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="CodigoHU" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="NombreHU" CssClass="control-label col-md-2">Nombre de la HU</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NombreHU" CssClass="control-label col-md-2"><span class="badge">19</span> Nombre de la HU</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NombreHU" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="ZonSecEta" CssClass="control-label col-md-2">Zona/Sector/Etapa</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="ZonSecEta" CssClass="control-label col-md-2"><span class="badge">20</span> Zona/Sector/Etapa</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="ZonSecEta" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Manzana" CssClass="control-label col-md-2">Manzana</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Manzana" CssClass="control-label col-md-2"><span class="badge">21</span> Manzana</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Manzana" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Lote" CssClass="control-label col-md-2">Lote</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Lote" CssClass="control-label col-md-2"><span class="badge">22</span> Lote</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Lote" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="SubLote" CssClass="control-label col-md-2">Sub-Lote</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="SubLote" CssClass="control-label col-md-2"><span class="badge">23</span> Sub-Lote</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="SubLote" CssClass="form-control"></asp:TextBox>
                         </div>
@@ -594,7 +564,7 @@
                 <div class="panel-heading">Características de la Titularidad</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CondTit" CssClass="control-label col-md-2">Condición Especial del Titular</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CondTit" CssClass="control-label col-md-2"><span class="badge">46</span> Condición Especial del Titular</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="CondTit" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Propietario Único"></asp:ListItem>
@@ -607,7 +577,7 @@
                             </asp:DropDownList>
                         </div>
                         <!--Aqui debe ir un textbox de especificacion-->
-                        <asp:Label runat="server" AssociatedControlID="FormaAdquisicion" CssClass="control-label col-md-2">Forma de Adquisición</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="FormaAdquisicion" CssClass="control-label col-md-2"><span class="badge">47</span> Forma de Adquisición</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="FormaAdquisicion" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Compra Venta"></asp:ListItem>
@@ -628,11 +598,11 @@
                         <!--Aqui debe ir un textbox de especificacion-->
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="FechaAdquisicion" CssClass="control-label col-md-2">Fecha de Adquisición</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="FechaAdquisicion" CssClass="control-label col-md-2"><span class="badge">48</span> Fecha de Adquisición</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="FechaAdquisicion" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="CondEspPred" CssClass="control-label col-md-2">Condición Especial del Predio <small class="small">(Exoneración)</small></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CondEspPred" CssClass="control-label col-md-2"><span class="badge">49</span> Condición Especial del Predio <small class="small">(Exoneración)</small></asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="CondEspPred" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Monumento histórico"></asp:ListItem>
@@ -643,11 +613,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="NumResExoPred" CssClass="control-label col-md-2">N° de Resolución de Exoneración del predio</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="NumResExoPred" CssClass="control-label col-md-2"><span class="badge">50</span> N° de Resolución de Exoneración del predio</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="NumResExoPred" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Porcentaje" CssClass="control-label col-md-2">Porcentaje</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Porcentaje" CssClass="control-label col-md-2"><span class="badge">51</span> Porcentaje</asp:Label>
                         <div class="col-md-4">
                             <div class="input-group">
                                 <asp:TextBox runat="server" ID="Porcentaje" CssClass="form-control" TextMode="Number"></asp:TextBox><span class="input-group-addon">%</span>
@@ -655,11 +625,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="FechaInicio" CssClass="control-label col-md-2">Fecha de Inicio</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="FechaInicio" CssClass="control-label col-md-2"><span class="badge">52</span> Fecha de Inicio</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="FechaInicio" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="FechaVenc" CssClass="control-label col-md-2">Fecha de Vencimiento</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="FechaVenc" CssClass="control-label col-md-2"><span class="badge">53</span> Fecha de Vencimiento</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="FechaVenc" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
@@ -671,7 +641,7 @@
                 <div class="panel-heading">Descripción del Predio</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="DescripcionPredio" CssClass="control-label col-md-2">Clasificación del Predio</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="DescripcionPredio" CssClass="control-label col-md-2"><span class="badge">54</span> Clasificación del Predio</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="DescripcionPredio" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Casa Habitación"></asp:ListItem>
@@ -699,7 +669,7 @@
                                 <asp:ListItem Value="05" Text="Terreno sin Construir"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="PredioEn" CssClass="control-label col-md-2">Predio Catastral en:</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="PredioEn" CssClass="control-label col-md-2"><span class="badge">55</span> Predio Catastral en:</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="PredioEn" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Galería"></asp:ListItem>
@@ -719,41 +689,41 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CodUso" CssClass="control-label col-md-2">Código de Uso</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CodUso" CssClass="control-label col-md-2"><span class="badge">56</span> Código de Uso</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="CodUso" CssClass="form-control" MaxLength="6"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="UsoPredioCatastral" CssClass="control-label col-md-2">Uso del Predio Catastral <small class="small">(Descripción)</small></asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="UsoPredioCatastral" CssClass="control-label col-md-2"><span class="badge">57</span> Uso del Predio Catastral <small class="small">(Descripción)</small></asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="UsoPredioCatastral" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Estructuracion" CssClass="control-label col-md-2">Estructuración</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Estructuracion" CssClass="control-label col-md-2"><span class="badge">58</span> Estructuración</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Estructuracion" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="Zonificacion" CssClass="control-label col-md-2">Zonificación</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Zonificacion" CssClass="control-label col-md-2"><span class="badge">59</span> Zonificación</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Zonificacion" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoTitulo" CssClass="control-label col-md-2">Área de Terreno Titular</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoTitulo" CssClass="control-label col-md-2"><span class="badge">60</span> Área de Terreno Titular</asp:Label>
                         <div class="col-md-2">
                             <div class="input-group">
                                 <asp:TextBox runat="server" ID="AreaTerrenoTitulo" TextMode="Number" CssClass="form-control"></asp:TextBox><span class="input-group-addon">m<sup>2</sup></span>
                             </div>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoDecladara" CssClass="control-label col-md-2">Área de Terreno Declarado</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoDecladara" CssClass="control-label col-md-2"><span class="badge">61</span> Área de Terreno Declarado</asp:Label>
                         <div class="col-md-2">
                             <div class="input-group">
                                 <asp:TextBox runat="server" ID="AreaTerrenoDecladara" TextMode="Number" CssClass="form-control"></asp:TextBox><span class="input-group-addon">m<sup>2</sup></span>
                             </div>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoVerificada" CssClass="control-label col-md-2">Área de Terreno Verificado</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="AreaTerrenoVerificada" CssClass="control-label col-md-2"><span class="badge">62</span> Área de Terreno Verificado</asp:Label>
                         <div class="col-md-2">
                             <div class="input-group">
                                 <asp:TextBox runat="server" ID="AreaTerrenoVerificada" TextMode="Number" CssClass="form-control"></asp:TextBox><span class="input-group-addon">m<sup>2</sup></span>
@@ -769,10 +739,10 @@
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th>Medida en campo</th>
-                                            <th>Medida según título</th>
-                                            <th>Colindancias en campo</th>
-                                            <th>Colindancias según título</th>
+                                            <th><span class="badge">63</span> Medida en campo</th>
+                                            <th><span class="badge">64</span> Medida según título</th>
+                                            <th><span class="badge">65</span> Colindancias en campo</th>
+                                            <th><span class="badge">66</span> Colindancias según título</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -852,22 +822,22 @@
                             <div class="panel-body">
                                 <div class="checkbox">
                                     <label>
-                                        <asp:CheckBox runat="server" ID="Luz" Text="Luz" />
+                                        <asp:CheckBox runat="server" ID="Luz" Text=" Luz " /> 
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <asp:CheckBox runat="server" ID="Agua" Text=" Agua" />
+                                        <asp:CheckBox runat="server" ID="Agua" Text=" Agua " />
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <asp:CheckBox runat="server" ID="Telefonia" Text=" Teléfono" />
+                                        <asp:CheckBox runat="server" ID="Telefonia" Text=" Teléfono " />
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <asp:CheckBox runat="server" ID="Desague" Text=" Desagüe" />
+                                        <asp:CheckBox runat="server" ID="Desague" Text=" Desagüe " />
                                     </label>
                                 </div>
                             </div>
@@ -875,17 +845,17 @@
                     </div>
                     <div class="col-md-10">
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="NumSuministroLuz" CssClass="control-label col-md-2">N° de Suministro de Luz</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="NumSuministroLuz" CssClass="control-label col-md-2"><span class="badge">71</span> N° de Suministro de Luz</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="NumSuministroLuz" CssClass="form-control" placeholder="N° Sum. Luz"></asp:TextBox>
                             </div>
-                            <asp:Label runat="server" AssociatedControlID="NumContratoAgua" CssClass="control-label col-md-2">N° de Contrato de Agua</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="NumContratoAgua" CssClass="control-label col-md-2"><span class="badge">72</span> N° de Contrato de Agua</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="NumContratoAgua" CssClass="form-control" placeholder="N° Contrato de Agua"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="NumTelf" CssClass="control-label col-md-2">N° Teléfono</asp:Label>
+                            <asp:Label runat="server" AssociatedControlID="NumTelf" CssClass="control-label col-md-2"><span class="badge">73</span> N° Teléfono</asp:Label>
                             <div class="col-md-4">
                                 <asp:TextBox runat="server" ID="NumTelf" CssClass="form-control" placeholder="N° Teléfono"></asp:TextBox>
                             </div>
@@ -901,11 +871,11 @@
                         <div class="panel-heading">Agregar Construcción</div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="In_NumPisoSotanoMezz" class="control-label col-md-2">N° de piso/Sot./Mezz.</label>
+                                <label for="In_NumPisoSotanoMezz" class="control-label col-md-2"><span class="badge">74</span> N° de piso/Sot./Mezz.</label>
                                 <div class="col-md-2">
                                     <input id="In_NumPisoSotanoMezz" class="form-control" />
                                 </div>
-                                <label for="In_FechaConstruccion" class="control-label col-md-2">Fecha de Construcción</label>
+                                <label for="In_FechaConstruccion" class="control-label col-md-2"><span class="badge">75</span> Fecha de Construcción</label>
                                 <div class="col-md-2">
                                     <input id="In_FechaConstruccion" class="form-control" type="month" />
                                 </div>
@@ -941,28 +911,28 @@
                             <div class="form-group">
                                 <div class="col-md-4 row no-gutter">
                                     <div class="col-md-6">
-                                        <input id="In_MurosyColumnas" class="form-control" placeholder="Muros y Columnas" />
+                                        <input id="In_MurosyColumnas" class="form-control" placeholder="79 Muros y Columnas" />
                                     </div>
                                     <div class="col-md-6">
-                                        <input id="In_Techos" class="form-control" placeholder="Techos" />
+                                        <input id="In_Techos" class="form-control" placeholder="80 Techos" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 row no-gutter">
                                     <div class="col-md-3">
-                                        <input id="In_Pisos" class="form-control" placeholder="Pisos" />
+                                        <input id="In_Pisos" class="form-control" placeholder="81 Pisos" />
                                     </div>
                                     <div class="col-md-3">
-                                        <input id="In_PuertasVentanas" class="form-control" placeholder="Puertas y Ventanas" />
+                                        <input id="In_PuertasVentanas" class="form-control" placeholder="82 Puertas y Ventanas" />
                                     </div>
                                     <div class="col-md-3">
-                                        <input id="In_Revestimiento" class="form-control" placeholder="Revestimiento" />
+                                        <input id="In_Revestimiento" class="form-control" placeholder="83 Revestimiento" />
                                     </div>
                                     <div class="col-md-3">
-                                        <input id="In_Banos" class="form-control" placeholder="Baños" />
+                                        <input id="In_Banos" class="form-control" placeholder="84 Baños" />
                                     </div>
                                 </div>
                                 <div class="col-md-2">
-                                    <input id="In_InstalacionesElectricas" class="form-control" placeholder="Ins. Elec. o Sanit." />
+                                    <input id="In_InstalacionesElectricas" class="form-control" placeholder="85 Ins. Elec. o Sanit." />
                                 </div>
                             </div>
                             <hr />
@@ -971,14 +941,14 @@
                                     <div class="panel-heading">Área Construída</div>
                                     <div class="panel-body">
                                         <div class="form-group">
-                                            <label for="In_AreaConsDeclarada" class="control-label col-md-2">Declarada</label>
+                                            <label for="In_AreaConsDeclarada" class="control-label col-md-2"><span class="badge">86</span> Declarada</label>
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <input id="In_AreaConsDeclarada" class="form-control" type="number" />
                                                     <span class="input-group-addon">m<sup>2</sup></span>
                                                 </div>
                                             </div>
-                                            <label for="In_AreaConsVerificada" class="control-label col-md-2">Veriricada</label>
+                                            <label for="In_AreaConsVerificada" class="control-label col-md-2"><span class="badge">87</span> Veriricada</label>
                                             <div class="col-md-4">
                                                 <div class="input-group">
                                                     <input id="In_AreaConsVerificada" class="form-control" type="Number" />
@@ -991,7 +961,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="In_UCA" class="control-label col-md-4">UCA</label>
+                                    <label for="In_UCA" class="control-label col-md-4"><span class="badge">88</span> UCA</label>
                                     <div class="col-md-8">
                                         <select id="In_UCA" class="form-control">
                                             <option value="">Seleccione una opción...</option>
@@ -1042,7 +1012,7 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <td>% de Bien Común</td>
+                                    <td><span class="badge">89</span> % de Bien Común</td>
                                     <td>Terreno</td>
                                     <td>Construcción</td>
                                 </tr>
@@ -1077,10 +1047,10 @@
                             <div class="col-md-4">
                                 <div class="row no-gutter">
                                     <div class="col-md-3">
-                                        <asp:TextBox runat="server" ID="In_CodigoObras" CssClass="form-control" Placeholder="Código"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="In_CodigoObras" CssClass="form-control" Placeholder="90 Código"></asp:TextBox>
                                     </div>
                                     <div class="col-md-9">
-                                        <asp:TextBox runat="server" ID="In_DescripcionObras" CssClass="form-control" Placeholder="Descripción"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="In_DescripcionObras" CssClass="form-control" Placeholder="91 Descripción"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -1215,17 +1185,17 @@
                         <div class="panel-heading">Registro Notarial de la Escritura Pública</div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="NombreNotaria" CssClass="control-label col-md-2">Nombre de la Notaria</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="NombreNotaria" CssClass="control-label col-md-2"><span class="badge">101</span> Nombre de la Notaria</asp:Label>
                                 <div class="col-md-10">
                                     <asp:TextBox runat="server" ID="NombreNotaria" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="Kardex" CssClass="control-label col-md-2">Kardex</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="Kardex" CssClass="control-label col-md-2"><span class="badge">102</span> Kardex</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="Kardex" CssClass="form-control"></asp:TextBox>
                                 </div>
-                                <asp:Label runat="server" AssociatedControlID="FechaEscrituraPub" CssClass="control-label col-md-2">Fecha de Escritura Pública</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="FechaEscrituraPub" CssClass="control-label col-md-2"><span class="badge">103</span> Fecha de Escritura Pública</asp:Label>
                                 <div class="col-md-4">
                                     <asp:TextBox runat="server" ID="FechaEscrituraPub" CssClass="form-control" TextMode="Date"></asp:TextBox>
                                 </div>
@@ -1239,7 +1209,7 @@
                 <div class="panel-heading">Inscripción del Predio Catastral en el Registro de Predios</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="TipoPartidaReg" CssClass="control-label col-md-2">Tipo de Partida Registral</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="TipoPartidaReg" CssClass="control-label col-md-2"><span class="badge">104</span> Tipo de Partida Registral</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="TipoPartidaReg" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Tomo"></asp:ListItem>
@@ -1249,21 +1219,21 @@
                             </asp:DropDownList>
                         </div>
                         <div class="col-md-2">
-                            <asp:TextBox runat="server" ID="PR_Num" CssClass="form-control" placeholder="Número"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="PR_Num" CssClass="form-control" placeholder="105 Número"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
-                            <asp:TextBox runat="server" ID="PR_Fojas" CssClass="form-control" placeholder="Fojas"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="PR_Fojas" CssClass="form-control" placeholder="106 Fojas"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
-                            <asp:TextBox runat="server" ID="PR_Asiento" CssClass="form-control" placeholder="Asiento"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="PR_Asiento" CssClass="form-control" placeholder="107 Asiento"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="PR_FechaInscripcion" CssClass="control-label col-md-2">Fecha de Inscripción del Predio</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="PR_FechaInscripcion" CssClass="control-label col-md-2"><span class="badge">108</span> Fecha de Inscripción del Predio</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="PR_FechaInscripcion" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="PR_DeclaratoriaFabrica" CssClass="control-label col-md-2">Declaratoria de Fábrica</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="PR_DeclaratoriaFabrica" CssClass="control-label col-md-2"><span class="badge">109</span> Declaratoria de Fábrica</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="PR_DeclaratoriaFabrica" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Fab. Inscrita"></asp:ListItem>
@@ -1272,11 +1242,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="PR_ASInsFab" CssClass="control-label col-md-2">As. Insc. de Fábrica</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="PR_ASInsFab" CssClass="control-label col-md-2"><span class="badge">110</span> As. Insc. de Fábrica</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="PR_ASInsFab" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" AssociatedControlID="PR_FechaInsFab" CssClass="control-label col-md-2">Fecha de Inscripción de Fábrica</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="PR_FechaInsFab" CssClass="control-label col-md-2"><span class="badge">111</span> Fecha de Inscripción de Fábrica</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="PR_FechaInsFab" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
@@ -1288,7 +1258,7 @@
                 <div class="panel-heading">Evaluación del Predio Catastral</div>
                 <div class="panel-body">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Evaluación del Predio</div>
+                        <div class="panel-heading"><span class="badge">112</span> Evaluación del Predio</div>
                         <div class="panel-body">
                             <div class="col-md-3">
                                 <asp:CheckBox runat="server" ID="PredioCatastralOmiso" Text="Predio Catastral Omiso" />
@@ -1305,7 +1275,7 @@
                         </div>
                     </div>
                     <div class="panel panel-default" id="Invadida_Terreno">
-                        <div class="panel-heading">Área de Terreno Invadida <small class="small">(m2)</small></div>
+                        <div class="panel-heading"><span class="badge">113</span> Área de Terreno Invadida <small class="small">(m2)</small></div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <asp:Label runat="server" AssociatedControlID="Invadida_LoteColin" CssClass="control-label col-md-2">En Lote Colindante</asp:Label>
@@ -1336,7 +1306,7 @@
                 <div class="panel-heading">Información Complementaria</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="CondDeclarante" CssClass="control-label col-md-2">Condición de Declarante</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="CondDeclarante" CssClass="control-label col-md-2"><span class="badge">114</span> Condición de Declarante</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="CondDeclarante" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Titular Catastral"></asp:ListItem>
@@ -1349,7 +1319,7 @@
                         </div>
                     </div>
                     <div class="panel panel-default" id="Lit_Ident">
-                        <div class="panel-heading">Identificación de los Litigantes</div>
+                        <div class="panel-heading"><span class="badge">115</span> Identificación de los Litigantes</div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
@@ -1383,7 +1353,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="EstadoLlenadoFicha" CssClass="control-label col-md-2">Estado de Llenado de la Ficha</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="EstadoLlenadoFicha" CssClass="control-label col-md-2"><span class="badge">116</span> Estado de Llenado de la Ficha</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="EstadoLlenadoFicha" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Ficha Completa"></asp:ListItem>
@@ -1393,14 +1363,14 @@
                             </asp:DropDownList>
                         </div>
                         <div class="col-md-3">
-                            <asp:TextBox runat="server" ID="NumHabitantes" CssClass="form-control" placeholder="N° de Habitantes" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="NumHabitantes" CssClass="form-control" placeholder="117 N° de Habitantes" TextMode="Number"></asp:TextBox>
                         </div>
                         <div class="col-md-3">
-                            <asp:TextBox runat="server" ID="NumFamilias" CssClass="form-control" placeholder="N° de Familiar" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="NumFamilias" CssClass="form-control" placeholder="118 N° de Familiar" TextMode="Number"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Mantenimiento" CssClass="control-label col-md-2">Mantenimiento</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="Mantenimiento" CssClass="control-label col-md-2"><span class="badge">119</span> Mantenimiento</asp:Label>
                         <div class="col-md-6">
                             <asp:DropDownList runat="server" ID="Mantenimiento" CssClass="form-control">
                                 <asp:ListItem Value="01" Text="Por se Predio Catastral Nuevo"></asp:ListItem>
@@ -1427,7 +1397,7 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="panel panel-default" id="Declarante">
-                            <div class="panel-heading">Declarante</div>
+                            <div class="panel-heading"><span class="badge">120</span> Declarante</div>
                             <div class="panel-body">
                                 <div class="form-group">
                                     <asp:Label runat="server" AssociatedControlID="FirmaDeclarante" CssClass="control-label col-md-3">Firma</asp:Label>
@@ -1464,7 +1434,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="panel panel-default" id="Supervisor">
-                            <div class="panel-heading">Supervisor</div>
+                            <div class="panel-heading"><span class="badge">121</span> Supervisor</div>
                             <div class="panel-body">
                                 <div class="form-group">
                                     <asp:Label runat="server" AssociatedControlID="FirmaSupervisor" CssClass="control-label col-md-3">Firma</asp:Label>
@@ -1501,7 +1471,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="panel panel-default" id="TecnicoCatastral">
-                            <div class="panel-heading">Técnico Catastral</div>
+                            <div class="panel-heading"><span class="badge">122</span> Técnico Catastral</div>
                             <div class="panel-body">
                                 <div class="form-group">
                                     <asp:Label runat="server" AssociatedControlID="FirmaTecnicoCatastral" CssClass="control-label col-md-3">Firma</asp:Label>
@@ -1538,7 +1508,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="panel panel-default" id="VerificadorCatastral">
-                            <div class="panel-heading">Verificador Catastral</div>
+                            <div class="panel-heading"><span class="badge">123</span> Verificador Catastral</div>
                             <div class="panel-body">
                                 <div class="form-group">
                                     <asp:Label runat="server" AssociatedControlID="FirmaVerificadorCatastral" CssClass="control-label col-md-3">Firma</asp:Label>

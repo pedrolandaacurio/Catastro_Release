@@ -77,7 +77,7 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a runat="server" href="~/Fichas/FichaIndividual">Ficha Individual</a></li>
                                         <li><a runat="server" href="~/Fichas/Ficha">Ficha C#</a></li>
-                                        <li><a runat="server" href="~/Fichas/WebForm1">ASP de Prueba</a></li>
+                                        <li><a runat="server" href="~/WebForm2">ASP de Prueba</a></li>
                                     </ul>
                                 </li>
                                 <li><a runat="server">Reportes</a></li>

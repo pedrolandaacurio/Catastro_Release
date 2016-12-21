@@ -12,10 +12,10 @@
             </thead>
             <tbody>
                 <tr id="rowToClone">
-                    <td><input type="text" class="form-control" id="campo1" placeholder="campo1" /></td>
-                    <td><input type="text" class="form-control" id="campo2" placeholder="campo2" /></td>
-                    <td><input type="text" class="form-control" id="campo3" placeholder="campo3" /></td>
-                    <td><input type="text" class="form-control" id="campo4" placeholder="campo4" /></td>
+                    <td><input type="text" runat="server" class="form-control" id="campo1" placeholder="campo1" /></td>
+                    <td><input type="text" runat="server" class="form-control" id="campo2" placeholder="campo2" /></td>
+                    <td><input type="text" runat="server" class="form-control" id="campo3" placeholder="campo3" /></td>
+                    <td><input type="text" runat="server" class="form-control" id="campo4" placeholder="campo4" /></td>
                 </tr>
             </tbody>
         </table>
@@ -26,10 +26,10 @@
     <script lang="text/javascript">
         function createRow() {
 
-            var input1 = '<input type="text" class="form-control" id="campo1" placeholder="campo1" />'
-            var input2 = '<input type="text" class="form-control" id="campo2" placeholder="campo2" />'
-            var input3 = '<input type="text" class="form-control" id="campo3" placeholder="campo3" />'
-            var input4 = '<input type="text" class="form-control" id="campo4" placeholder="campo4" />'
+            var input1 = '<input type="text" runat="server" class="form-control" id="campo1" placeholder="campo1" />'
+            var input2 = '<input type="text" runat="server" class="form-control" id="campo2" placeholder="campo2" />'
+            var input3 = '<input type="text" runat="server" class="form-control" id="campo3" placeholder="campo3" />'
+            var input4 = '<input type="text" runat="server" class="form-control" id="campo4" placeholder="campo4" />'
 
             var row = document.createElement('tr'); // create row node
 
