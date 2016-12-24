@@ -59,8 +59,43 @@ namespace catastro_release.Fichas
             //Construcciones
             SqlCommand cmdConstrucciones = sc.CreateCommand();
             cmdConstrucciones.CommandType = System.Data.CommandType.Text;
-            cmdConstrucciones.CommandText = "insert into dbo.Construcciones (Cuc) values ('" + Cuc.Text + "')";
+            cmdConstrucciones.CommandText = "insert into dbo.Construcciones (Cuc, NumPisoSotanoMezz, FechaContruccion, MEP, ECS, ECC, MurosColumnas, Techos, Pisos, PuertasVentanas, Revestimiento, Baños, InstElecSani, Declarada, Verificada, UCA) values ('" + Cuc.Text + "','" + In_NumPisoSotanoMezz.Text +"','" + In_FechaConstruccion.Text + "','" + In_MEP.Text + "','" + In_ECS.Text + "','" + In_ECC.Text + "','" + In_MurosyColumnas.Text + "','" + In_Techos.Text + "','" + In_Pisos.Text + "','" + In_PuertasVentanas.Text + "','" + In_Revestimiento.Text + "','" + In_Banos.Text + "','" + In_InstalacionesElectricas.Text + "','" + In_AreaConsDeclarada.Text + "','" + In_AreaConsVerificada.Text + "','" + In_UCA.Text + "')";
             cmdConstrucciones.ExecuteNonQuery();
+
+            //ConstruccionesBienComun
+            SqlCommand cmdConst_BienComun = sc.CreateCommand();
+            cmdConst_BienComun.CommandType = System.Data.CommandType.Text;
+            cmdConst_BienComun.CommandText = "insert into dbo.ConstBienComun (Cuc, PorcTerrLegal, PorTerrFisico, PorConsLegal, PorConsFisico) values ('" + Cuc.Text + "','" + TerrenoLegal.Text + "','" + ConstruccionLegal.Text + "','" + TerrenoFisico.Text + "','" + ConstruccionFisico.Text + "')";
+
+            //RegistroNotarialEscrituraPublica
+            SqlCommand cmdDoc_EscritPub = sc.CreateCommand();
+            cmdDoc_EscritPub.CommandType = System.Data.CommandType.Text;
+            cmdDoc_EscritPub.CommandText = "insert into dbo.DocEscritPub (Cuc, NombreNotaria, Kardex, FechaEscrituraPub) values ('" + Cuc.Text + "','" + NombreNotaria.Text + "','" + Kardex.Text + "','" + FechaEscrituraPub.Text + "')";
+
+            //InscripcionPredioCatastral
+            SqlCommand cmdIns_PreCat = sc.CreateCommand();
+            cmdIns_PreCat.CommandType = System.Data.CommandType.Text;
+            cmdIns_PreCat.CommandText = "insert into dbo.InsPreCat (Cuc, PR_Tipo, PR_Num, PR_Fojas, PR_Asiento, PR_FechaInscripcion, PR_DeclaratoriaFabrica, PR_ASInsFab, PR_FechaInsFab) values ('" + Cuc.Text + "','" + TipoPartidaReg.Text + "','" + PR_Num.Text + "','" + PR_Fojas.Text + "','" + PR_Asiento.Text + "','" + PR_FechaInscripcion.Text + "','" + PR_DeclaratoriaFabrica.Text + "','" + PR_ASInsFab.Text + "','" + PR_FechaInsFab.Text + "')";
+
+            //EvaluacionPredioCatastral
+            SqlCommand cmdEval_PredCat = sc.CreateCommand();
+            cmdEval_PredCat.CommandType = System.Data.CommandType.Text;
+            cmdEval_PredCat.CommandText = "insert into dbo.EvalPredCatt (Cuc, Eval_Omiso, Eval_SubVal, Eval_SobreVal, Eval_Conf, Invadida_LoteColin, Invadida_AreaPub, Invadida_JardinAis, Invadida_AreaIntangible) values ('" + Cuc.Text + "','" + PredioCatastralOmiso.Text + "','" + PredioCatastralSubvaluado.Text + "','" + PredioCatastralSobrevaluado.Text + "','" + PredioCatastralConforme.Text + "','" + Invadida_LoteColin.Text + "','" + Invadida_AreaPub.Text + "','" + Invadida_JardinAis.Text + "','" + Invadida_AreaIntangible.Text + "')";
+
+            //InformacionComplementaria
+            SqlCommand cmdInfo_Complement = sc.CreateCommand();
+            cmdInfo_Complement.CommandType = System.Data.CommandType.Text;
+            cmdInfo_Complement.CommandText = "insert into dbo.InfoComplement (Cuc, CondDeclarante, CondDeclaranteEspec, Lit1_TD, Lit1_NumDoc, Lit1_NomApe, Lit1_CodContr, Lit2_TD, Lit2_NumDoc, Lit2_NomApe, Lit2_CodContr, EstadoLlenadoFicha, NumHabitantes, NumFamilias, Mantenimiento) values ('" + Cuc.Text + "','" + CondDeclarante.Text + "','" + CondDeclaranteEspec.Text + "','" + In_TDLit.Text + "','" + In_NumDocLit.Text + "','" + In_ApeNomLit.Text + "','" + In_CodContrbLit.Text + "','" + EstadoLlenadoFicha.Text + "','" + NumHabitantes.Text + "','" + NumFamilias.Text + "','" + Mantenimiento.Text + "')";
+
+            //Observaciones
+            SqlCommand cmdObserv = sc.CreateCommand();
+            cmdObserv.CommandType = System.Data.CommandType.Text;
+            cmdObserv.CommandText = "insert into dbo.Observ (Cuc, Observaciones) values ('" + Cuc.Text + "','" + Observaciones_Descripción.Text + "')";
+
+            //Firmas
+            SqlCommand cmdFirmas = sc.CreateCommand();
+            cmdFirmas.CommandType = System.Data.CommandType.Text;
+            cmdFirmas.CommandText = "insert into dbo.Firmas (Cuc, DeclaranteDNI, DeclaranteNombres, DeclaranteApellidos, DeclaranteFecha, DeclaranteFirma, SupervisorDNI, SupervisorNombres, SupervisorApellidos, SupervisorFecha, SupervisorFirma, TecCatastralDNI, TecCatastralNombres, TecCatastralApellidos, TecCatastralFecha, TecCatastralFirma, VerCatastralDNI, VerCatastralNombres, VerCatastralApellidos, VerCatastralFecha, VerCatastralFirma) values ('" + Cuc.Text + "','" + DNIDeclarante.Text + "','" + NombreDeclarante.Text + "','" + ApellidoDeclarante.Text + "','" + FechaDeclarante.Text + "','" + FirmaDeclarante + "','" + DNISupervisor.Text + "','" + NombreSupervisor.Text + "','" + ApellidoSupervisor.Text + "','" + FechaSupervisor.Text + "','" + FirmaSupervisor + "','" + DNITecnicoCatastral.Text + "','" + NombreTecnicoCatastral.Text + "','" + ApellidoTecnicoCatastral.Text + "','" + FechaTecnicoCatastral.Text + "','" + FirmaTecnicoCatastral + "','" + DNIVerificadorCatastral.Text + "','" + NumRegistroVerificadorCatastral.Text + "','" + NombreVerificadorCatastral.Text + "','" + ApellidoVerificadorCatastral.Text + "','" + FechaVerificadorCatastral.Text + "','" + FirmaVerificadorCatastral + "')";
 
             sc.Close();
 
