@@ -39,8 +39,7 @@ namespace catastro_release.Fichas
             //DomicilioTitularCatastral
             SqlCommand cmdDom_TitCat = sc.CreateCommand();
             cmdDom_TitCat.CommandType = System.Data.CommandType.Text;
-            cmdDom_TitCat.CommandText = "insert into dbo.DomTitCat (Cuc, Dpto, Prov, Dist, Telf, Anexo, Fax, CorreoElec, CodVia, TipoVia, NombreVia, NumMunicipal, NombreEdificacion, NumInterior, CodHU, NombreHU, ZonSecEta, Manzana, Lote, SubLote) values 
-                ('" + Cuc.Text + "', '" + Dpto.Text + "', '" + Prov.Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "')";
+            cmdDom_TitCat.CommandText = "insert into dbo.DomTitCat (Cuc, Dpto, Prov, Dist, Telf, Anexo, Fax, CorreoElec, CodVia, TipoVia, NombreVia, NumMunicipal, NombreEdificacion, NumInterior, CodHU, NombreHU, ZonSecEta, Manzana, Lote, SubLote) values ('" + Cuc.Text + "','" + Dpto.Text + "','" + Prov.Text + "','" + Dist.Text + "','" + Telf.Text + "','" + Anexo.Text + "','" + Fax.Text + "','" + Email.Text + "','" + CodVia.Text + "','" + TipoVia.Text + "','" + NombreVia.Text + "','" + NumMunicipal.Text + "','" + NombreEdificacion.Text + "','" + NumInterior.Text + "','" + CodigoHU.Text + "','" + NombreHU.Text + "','" + ZonSecEta.Text + "','" + Manzana.Text + "','" + Lote.Text + "','" + SubLote.Text + "')";
 
             //CaracteristicasTitularidad
             SqlCommand cmdCaract_Tit = sc.CreateCommand();
@@ -50,8 +49,12 @@ namespace catastro_release.Fichas
             //DescripcionPredio
             SqlCommand cmdDescrip_Pred = sc.CreateCommand();
             cmdDescrip_Pred.CommandType = System.Data.CommandType.Text;
-            cmdDescrip_Pred.CommandText = "insert into dbo.DescripPred (Cuc, DescripcionPredio, DescripcionPredioEspec, PredioEn, PredioEnEspec, CodUso, UsoPredioCatastral) values 
-                ('" + Cuc.Text + "', '" + DescripcionPredio.Text + "', '" + DescripcionPredioEspec.Text + "', '" + PredioEnEspec.Text + "', '" + CodUso.Text + "', '" + UsoPredioCatastral.Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "', '" + .Text + "')";
+            cmdDescrip_Pred.CommandText = "insert into dbo.DescripPred (Cuc, DescripcionPredio, DescripcionPredioEspec, PredioEn, PredioEnEspec, CodUso, UsoPredioCatastral, Estructuracion, Zonificacion, AreaTerrenoTitulo, AreaTerrenoDecladara, AreaTerrenoVerificada, Fr_Campo, Fr_Titulo, Fr_ColinCampo, Fr_ColinTit, De_Campo, De_Titulo, De_ColinCampo, De_ColinTit, Iz_Campo, Iz_Titulo, Iz_ColinCampo, Iz_ColinTit, Fo_Campo, Fo_Titulo, Fo_ColinCampo, Fo_ColinTit) values ('" + Cuc.Text + "','" + DescripcionPredio.Text + "','" + DescripcionPredioEspec.Text + "','" + PredioEn.Text + "','" + PredioEnEspec.Text + "','" + CodUso.Text + "','" + UsoPredioCatastral.Text + "','" + Estructuracion.Text + "','" + Zonificacion.Text + "','" + AreaTerrenoTitulo.Text + "','" + AreaTerrenoDecladara.Text + "','" + AreaTerrenoVerificada.Text + "','" + Fr_Campo.Text + "','" + Fr_Titulo.Text + "','" + Fr_ColinCampo.Text + "','" + Fr_ColinTit.Text + "','" + De_Campo.Text + "','" + De_Titulo.Text + "','" + De_ColinCampo.Text + "','" + De_ColinTit.Text + "','" + Iz_Campo.Text + "','" + Iz_Titulo.Text + "','" + Iz_ColinCampo.Text + "','" + Iz_ColinTit.Text + "','" + Fo_Campo.Text + "','" + Fo_Titulo.Text + "','" + Fo_ColinCampo.Text + "','" + Fo_ColinTit.Text + "')";
+
+            //ServiciosBasicos
+            SqlCommand cmdServ_Basic = sc.CreateCommand();
+            cmdServ_Basic.CommandType = System.Data.CommandType.Text;
+            cmdServ_Basic.CommandText = "insert into dbo.ServBasic (Cuc, Luz, Agua, Telefonia, Desague, NumSuministroLuz, NumContratoAgua, NumTelf) values ('" + Cuc.Text + "','" + Luz.Text + "','" + Agua.Text + "','" + Telefonia.Text + "','" + Desague.Text + "','" + NumSuministroLuz.Text + "','" + NumContratoAgua.Text + "','" + NumTelf.Text + "')";
 
             //Construcciones
             SqlCommand cmdConstrucciones = sc.CreateCommand();
