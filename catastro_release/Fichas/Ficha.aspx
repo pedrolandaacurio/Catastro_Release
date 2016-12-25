@@ -586,7 +586,7 @@
                         </div>
                     </div>
                     <script type="text/javascript">
-                        function ShowHideDiv() {
+                        function ShowHideDiv2() {
                             var FormaAdquisicion = document.getElementById("FormaAdquisicion");
                             var FormaAdqui = document.getElementById("FormaAdqui");
                             EspecFormaAdqui.style.display = FormaAdquisicion.value == "13" ? "block" : "none";
