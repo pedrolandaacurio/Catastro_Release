@@ -168,3 +168,11 @@ C:\Users\pedro\Documents\GitHub\catastro_release\catastro_release\obj\Debug\cata
 C:\Users\pedro\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.csproj.GenerateResource.Cache
 C:\Users\pedro\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.dll
 C:\Users\pedro\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.pdb
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.csprojResolveAssemblyReference.cache
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.Migrations.InitialCreate.resources
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.Migrations.AddedNamesField.resources
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.Migrations.AddedApePatField.resources
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.Migrations.AddedApeMatField.resources
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.csproj.GenerateResource.Cache
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.dll
+C:\Users\HUNGRIOS\Documents\GitHub\catastro_release\catastro_release\obj\Debug\catastro_release.pdb
