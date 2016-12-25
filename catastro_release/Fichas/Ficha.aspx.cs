@@ -57,10 +57,10 @@ namespace catastro_release.Fichas
             cmdServ_Basic.CommandText = "insert into dbo.ServBasic (Cuc, Luz, Agua, Telefonia, Desague, NumSuministroLuz, NumContratoAgua, NumTelf) values ('" + Cuc.Text + "','" + Luz.Text + "','" + Agua.Text + "','" + Telefonia.Text + "','" + Desague.Text + "','" + NumSuministroLuz.Text + "','" + NumContratoAgua.Text + "','" + NumTelf.Text + "')";
 
             //Construcciones
-            SqlCommand cmdConstrucciones = sc.CreateCommand();
-            cmdConstrucciones.CommandType = System.Data.CommandType.Text;
-            cmdConstrucciones.CommandText = "insert into dbo.Construcciones (Cuc, NumPisoSotanoMezz, FechaContruccion, MEP, ECS, ECC, MurosColumnas, Techos, Pisos, PuertasVentanas, Revestimiento, Baños, InstElecSani, Declarada, Verificada, UCA) values ('" + Cuc.Text + "','" + In_NumPisoSotanoMezz.Text +"','" + In_FechaConstruccion.Text + "','" + In_MEP.Text + "','" + In_ECS.Text + "','" + In_ECC.Text + "','" + In_MurosyColumnas.Text + "','" + In_Techos.Text + "','" + In_Pisos.Text + "','" + In_PuertasVentanas.Text + "','" + In_Revestimiento.Text + "','" + In_Banos.Text + "','" + In_InstalacionesElectricas.Text + "','" + In_AreaConsDeclarada.Text + "','" + In_AreaConsVerificada.Text + "','" + In_UCA.Text + "')";
-            cmdConstrucciones.ExecuteNonQuery();
+            //SqlCommand cmdConstrucciones = sc.CreateCommand();
+            //cmdConstrucciones.CommandType = System.Data.CommandType.Text;
+            //cmdConstrucciones.CommandText = "insert into dbo.Construcciones (Cuc, NumPisoSotanoMezz, FechaContruccion, MEP, ECS, ECC, MurosColumnas, Techos, Pisos, PuertasVentanas, Revestimiento, Baños, InstElecSani, Declarada, Verificada, UCA) values ('" + Cuc.Text + "','" + In_NumPisoSotanoMezz.Text +"','" + In_FechaConstruccion.Text + "','" + In_MEP.Text + "','" + In_ECS.Text + "','" + In_ECC.Text + "','" + In_MurosyColumnas.Text + "','" + In_Techos.Text + "','" + In_Pisos.Text + "','" + In_PuertasVentanas.Text + "','" + In_Revestimiento.Text + "','" + In_Banos.Text + "','" + In_InstalacionesElectricas.Text + "','" + In_AreaConsDeclarada.Text + "','" + In_AreaConsVerificada.Text + "','" + In_UCA.Text + "')";
+            //cmdConstrucciones.ExecuteNonQuery();
 
             //ConstruccionesBienComun
             SqlCommand cmdConst_BienComun = sc.CreateCommand();

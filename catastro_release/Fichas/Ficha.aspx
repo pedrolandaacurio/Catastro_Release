@@ -412,29 +412,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                Launch demo modal
-            </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                    ...
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-                </div>
-            </div>
             <!--DOMICILIO FISCAL DEL TITULAR CATASTRAL-->
             <div class="panel panel-default" id="DomicilioFiscal">
                 <div class="panel-heading">Domicilio Fiscal del Titular Catastral</div>
@@ -576,7 +553,19 @@
                                 <asp:ListItem Value="07" Text="Otros..."></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <!--Aqui debe ir un textbox de especificacion-->
+                        <script type="text/javascript">
+                            function ShowHideDiv() {
+                                var CondTit = document.getElementById("CondTit");
+                                var EspecTitularEspecial = document.getElementById("EspecTitularEspecial");
+                                EspecTitularEspecial.style.display = CondTit.value == "07" ? "block" : "none";
+                            }
+                        </script>
+                        <div id="EspecTitularEspecial" class="form-group" style="display: none">
+                            <asp:Label runat="server" CssClass="control-label col-md-2">Especificación</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="CondTitEspec" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
                         <asp:Label runat="server" AssociatedControlID="FormaAdquisicion" CssClass="control-label col-md-2"><span class="badge">47</span> Forma de Adquisición</asp:Label>
                         <div class="col-md-4">
                             <asp:DropDownList runat="server" ID="FormaAdquisicion" CssClass="form-control">
@@ -595,7 +584,19 @@
                                 <asp:ListItem Value="13" Text="Otro.."></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <!--Aqui debe ir un textbox de especificacion-->
+                    </div>
+                    <script type="text/javascript">
+                        function ShowHideDiv() {
+                            var FormaAdquisicion = document.getElementById("FormaAdquisicion");
+                            var FormaAdqui = document.getElementById("FormaAdqui");
+                            EspecFormaAdqui.style.display = FormaAdquisicion.value == "13" ? "block" : "none";
+                        }
+                    </script>
+                    <div id="EspecFormaAdqui" class="form-group" style="display: none">
+                        <asp:Label runat="server" CssClass="control-label col-md-2">Especificación</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" ID="FormaAdquisicionEspec" CssClass="form-control"></asp:TextBox>
+                        </div>
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="FechaAdquisicion" CssClass="control-label col-md-2"><span class="badge">48</span> Fecha de Adquisición</asp:Label>

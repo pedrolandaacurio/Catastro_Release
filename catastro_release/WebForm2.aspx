@@ -20,50 +20,37 @@
                     <tbody>
                         <tr class="section">
                             <td>
-                                <!--<input runat="server" class="form-control" id="Ubi_CodViaHTML" maxlength="6" />-->
-                                <asp:TextBox runat="server" CssClass="form-control" ID="CodViaUbi" MaxLength="6"></asp:TextBox>
+                                <input class="form-control" name="Ubi_CodViaHTML" maxlength="6" />
                             </td>
                             <td>
-                                <!--<input runat="server" class="form-control" id="Ubi_TipoViaHTML" />-->
-                                <asp:TextBox runat="server" CssClass="form-control" ID="TipoViaUbi"></asp:TextBox>
+                                <input class="form-control" name="Ubi_TipoViaHTML" />
                             </td>
                             <td>
-                                <!--<input runat="server" class="form-control" id="Ubi_NombreViaHTML" />-->
-                                <asp:TextBox runat="server" CssClass="form-control" ID="NombreViaUbi"></asp:TextBox>
+                                <input class="form-control" name="Ubi_NombreViaHTML" />
                             </td>
                             <td>
-                                <asp:DropDownList runat="server" CssClass="form-control" ID="TipoPuerta">
-                                    <asp:ListItem Text="Principal" Value="P"></asp:ListItem>
-                                    <asp:ListItem Text="Secundaria" Value="S"></asp:ListItem>
-                                    <asp:ListItem Text="Garage" Value="G"></asp:ListItem>
-                                    <asp:ListItem Text="Estacionamiento" Value="E"></asp:ListItem>
-                                </asp:DropDownList>
-                                <!--<select runat="server" class="form-control" id="Ubi_TipoPuertaHTML">
+
+                                <select class="form-control" name="Ubi_TipoPuertaHTML">
                                     <option value="P">Principal</option>
                                     <option value="S">Secundaria</option>
                                     <option value="G">Garage</option>
                                     <option value="E">Estacionamiento</option>
-                                </select>-->
+                                </select>
                             </td>
                             <td>
-                                <!--<input runat="server" class="form-control" id="Ubi_NumMunicipalHTML" />-->
-                                <asp:TextBox runat="server" CssClass="form-control" ID="NumMunicipal"></asp:TextBox>
+                                <input class="form-control" name="Ubi_NumMunicipalHTML" />
                             </td>
                             <td>
-                                <asp:DropDownList runat="server" CssClass="form-control" ID="CondNum">
-                                    <asp:ListItem Text="Generado por la Munic." Value="01"></asp:ListItem>
-                                    <asp:ListItem Text="Autogenerado por el Tit. Cat." Value="02"></asp:ListItem>
-                                    <asp:ListItem Text="Generado por el Tec. Cat." Value="03"></asp:ListItem>
-                                </asp:DropDownList>
-                                <!--<select runat="server" class="form-control" id="Ubi_CondNumHTML">
+                                <select class="form-control" name="Ubi_CondNumHTML">
                                     <option value="01">Generado por la Munic.</option>
                                     <option value="02">Autogenerado por el Tit. Cat.</option>
                                     <option value="03">Generado por el Tec. Cat.</option>
-                                </select>-->
+                                </select>
                             </td>
                             <td>
-                                <asp:TextBox runat="server" CssClass="form-control" ID="NumCert"></asp:TextBox>
-                                <!--<input runat="server" class="form-control" id="Ubi_NumCertHTML" />-->
+                                
+                                <input class="form-control" name="Ubi_NumCertHTML" />
+                            </td>
                             <td>
                                 <p><a href="#" class='remove'>Quitar</a></p>
                             </td>
