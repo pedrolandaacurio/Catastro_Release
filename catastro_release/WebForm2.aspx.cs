@@ -34,20 +34,20 @@ namespace catastro_release
         protected void InsertData_Click(object sender, EventArgs e)
         {
             sc.Open();
-            foreach  (DataRow DRow in sections.Rows)
-            {
-                TableRow tRow = new TableRow();
+            //foreach  (DataRow DRow in section.Rows)
+            //{
+                //TableRow tRow = new TableRow();
 
                 //string CodVia = String.Format("{0}", Request.Form["Ubi_CodViaHTML"]);
                 //string TipoVia = String.Format("{0}", Request.Form["Ubi_TipoViaHTML"]);
                 //string NombreVia = String.Format("{0}", Request.Form["Ubi_NombreViaHTML"]);
 
                 //Ficha Individual General
-                SqlCommand cmdFicha = sc.CreateCommand();
-                cmdFicha.CommandType = System.Data.CommandType.Text;
-                cmdFicha.CommandText = "insert into dbo.Ubicacion (CodVia, TipoVia, NombreVia, Tipo_Puerta, Num_Mun, Cond_Num, NumCertNum, CUC) values ('" + CodViaUbi.Text + "','" + TipoViaUbi.Text + "','" + NombreViaUbi.Text + "','" + TipoPuerta.Text + "','"+ NumMunicipal.Text +"','" + CondNum.Text + "','" + NumCert.Text +"','123456789012')";
-                cmdFicha.ExecuteNonQuery();
-            }
+                //SqlCommand cmdFicha = sc.CreateCommand();
+                //cmdFicha.CommandType = System.Data.CommandType.Text;
+                //cmdFicha.CommandText = "insert into dbo.Ubicacion (CodVia, TipoVia, NombreVia, Tipo_Puerta, Num_Mun, Cond_Num, NumCertNum, CUC) values ('" + CodViaUbi.Text + "','" + TipoViaUbi.Text + "','" + NombreViaUbi.Text + "','" + TipoPuerta.Text + "','"+ NumMunicipal.Text +"','" + CondNum.Text + "','" + NumCert.Text +"','123456789012')";
+                //cmdFicha.ExecuteNonQuery();
+            //}
 
             sc.Close();
         }

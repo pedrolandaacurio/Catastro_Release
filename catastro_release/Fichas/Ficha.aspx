@@ -1,5 +1,22 @@
 ﻿<%@ Page Title="Ficha Individual Urbana Catastral" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ficha.aspx.cs" Inherits="catastro_release.Fichas.Ficha" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <script type="text/javascript">
+    function ShowHideDiv() {
+        var ddlPassport = document.getElementById("MainContent_Ubi_TipoInterior");
+        var dvPassport = document.getElementById("TipoInterior_Esp");
+        dvPassport.style.display = ddlPassport.value == "Y" ? "block" : "none";
+    }
+    function ShowHideDiv2() {
+        var ddlPassport = document.getElementById("MainContent_Tit1_TipoDoc");
+        var dvPassport = document.getElementById("Tit1_TipoDoc_Esp");
+        dvPassport.style.display = ddlPassport.value == "8" ? "block" : "none";
+    }
+    function ShowHideDiv3() {
+        var ddlPassport = document.getElementById("MainContent_Tit2_TipoDoc");
+        var dvPassport = document.getElementById("Tit2_TipoDoc_Esp");
+        dvPassport.style.display = ddlPassport.value == "8" ? "block" : "none";
+    }
+</script>
    
     <div class="form-horizontal">
         <fieldset>
@@ -173,10 +190,33 @@
                             </asp:DropDownList>
                         </div>
                     </div>
-                    <div class="form-group">
+                   
+                        <!--script type="text/javascript">
+                            function ShowHideDiv() {
+                                var TipoInterior = document.getElementById("TipoInterior");
+                                var TipoInterior_Esp = document.getElementById("TipoInterior_Esp");
+                                TipoInterior_Esp.style.display = TipoInterior.value == "Y" ? "block" : "none";
+                            }
+
+                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        $(function () {
+                            $("#Ubi_TipoInterior").change(function () {
+                                if ($(this).val() == "Y") {
+                                    $("#TipoInterior_Esp").show();
+                                } else {
+                                    $("#TipoInterior_Esp").hide();
+                                }
+                            });
+                        });
+                    </script>
+                        </script-->
+                        
+                    <div class="form-group" id="TipoInterior">                        
                         <asp:Label runat="server" AssociatedControlID="Ubi_TipoInterior" CssClass="control-label col-md-2"><span class="badge">16</span> Tipo de Interior</asp:Label>
+                        
                         <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="Ubi_TipoInterior" CssClass="form-control">
+                            <asp:DropDownList runat="server" ID="Ubi_TipoInterior" CssClass="form-control" onchange = "ShowHideDiv()">
                                 <asp:ListItem Text="Departamento" Value="01"></asp:ListItem>
                                 <asp:ListItem Text="Casa/Chalet" Value="02"></asp:ListItem>
                                 <asp:ListItem Text="Oficina" Value="03"></asp:ListItem>
@@ -186,9 +226,14 @@
                                 <asp:ListItem Text="Tienda" Value="07"></asp:ListItem>
                                 <asp:ListItem Text="Puesto" Value="08"></asp:ListItem>
                                 <asp:ListItem Text="Stand" Value="09"></asp:ListItem>
-                                <asp:ListItem Text="Otros" Value="10"></asp:ListItem>
+                                <asp:ListItem Text="Otros" Value="Y"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
+                        <div class="col-md-6" id="TipoInterior_Esp" style="display: none">
+                            <asp:TextBox runat="server" ID="Ubi_TipoInteriorEsp" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>   
+                    <div class="form-group"> 
                         <asp:Label runat="server" AssociatedControlID="Ubi_NumInterior" CssClass="control-label col-md-2"><span class="badge">17</span> Número de Interior</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="Ubi_NumInterior" CssClass="form-control"></asp:TextBox>
@@ -263,7 +308,7 @@
                                     <div class="form-group">
                                         <asp:Label runat="server" AssociatedControlID="Tit1_TipoDoc" CssClass="control-label col-md-2"><span class="badge">26</span> Tipo de Documento</asp:Label>
                                         <div class="col-md-4">
-                                            <asp:DropDownList runat="server" ID="Tit1_TipoDoc" CssClass="form-control">
+                                            <asp:DropDownList runat="server" ID="Tit1_TipoDoc" CssClass="form-control"  onchange = "ShowHideDiv2()">
                                                 <asp:ListItem Text="No presentó documento" Value="01"></asp:ListItem>
                                                 <asp:ListItem Text="DNI" Value="02"></asp:ListItem>
                                                 <asp:ListItem Text="Carnet de Identidad de Policía Nacional" Value="03"></asp:ListItem>
@@ -271,9 +316,14 @@
                                                 <asp:ListItem Text="Partida de Nacimiento" Value="05"></asp:ListItem>
                                                 <asp:ListItem Text="Pasaporte" Value="06"></asp:ListItem>
                                                 <asp:ListItem Text="Carnet de Extranjería" Value="07"></asp:ListItem>
-                                                <asp:ListItem Text="Otros" Value="08"></asp:ListItem>
+                                                <asp:ListItem Text="Otros" Value="8"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
+                                        <div class="col-md-6" id="Tit1_TipoDoc_Esp" style="display: none">
+                                            <asp:TextBox runat="server" ID="Tit1_TipoDocEsp" CssClass="form-control"></asp:TextBox>
+                                        </div>                                        
+                                    </div>
+                                    <div class="form-group">
                                         <asp:Label runat="server" AssociatedControlID="Tit1_NumDoc" CssClass="control-label col-md-2"><span class="badge">27</span> Nº de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit1_NumDoc" CssClass="form-control"></asp:TextBox>
@@ -303,7 +353,7 @@
                                     <div class="form-group">
                                         <asp:Label runat="server" AssociatedControlID="Tit2_TipoDoc" CssClass="control-label col-md-2"><span class="badge">26</span> Tipo de Documento</asp:Label>
                                         <div class="col-md-4">
-                                            <asp:DropDownList runat="server" ID="Tit2_TipoDoc" CssClass="form-control">
+                                            <asp:DropDownList runat="server" ID="Tit2_TipoDoc" CssClass="form-control" onchange = "ShowHideDiv3()">
                                                 <asp:ListItem Text="No presentó documento" Value="01"></asp:ListItem>
                                                 <asp:ListItem Text="DNI" Value="02"></asp:ListItem>
                                                 <asp:ListItem Text="Carnet de Identidad de Policía Nacional" Value="03"></asp:ListItem>
@@ -311,9 +361,14 @@
                                                 <asp:ListItem Text="Partida de Nacimiento" Value="05"></asp:ListItem>
                                                 <asp:ListItem Text="Pasaporte" Value="06"></asp:ListItem>
                                                 <asp:ListItem Text="Carnet de Extranjería" Value="07"></asp:ListItem>
-                                                <asp:ListItem Text="Otros" Value="08"></asp:ListItem>
+                                                <asp:ListItem Text="Otros" Value="8"></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
+                                        <div class="col-md-6" id="Tit2_TipoDoc_Esp" style="display: none">
+                                            <asp:TextBox runat="server" ID="Tit2_TipoDocEsp" CssClass="form-control"></asp:TextBox>
+                                        </div>                                         
+                                    </div>
+                                    <div class="form-group">
                                         <asp:Label runat="server" AssociatedControlID="Tit2_NumDoc" CssClass="control-label col-md-2"><span class="badge">27</span> Nº de Documento</asp:Label>
                                         <div class="col-md-4">
                                             <asp:TextBox runat="server" ID="Tit2_NumDoc" CssClass="form-control"></asp:TextBox>
@@ -1575,4 +1630,5 @@
                 <li><a href="#Final">Final</a></li>
             </ul>
         </nav>-->
+     
 </asp:Content>

@@ -220,6 +220,15 @@ namespace catastro_release.Fichas {
         protected global::System.Web.UI.WebControls.DropDownList Ubi_TipoInterior;
         
         /// <summary>
+        /// Control Ubi_TipoInteriorEsp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Ubi_TipoInteriorEsp;
+        
+        /// <summary>
         /// Control Ubi_NumInterior.
         /// </summary>
         /// <remarks>
@@ -310,6 +319,15 @@ namespace catastro_release.Fichas {
         protected global::System.Web.UI.WebControls.DropDownList Tit1_TipoDoc;
         
         /// <summary>
+        /// Control Tit1_TipoDocEsp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Tit1_TipoDocEsp;
+        
+        /// <summary>
         /// Control Tit1_NumDoc.
         /// </summary>
         /// <remarks>
@@ -353,6 +371,15 @@ namespace catastro_release.Fichas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Tit2_TipoDoc;
+        
+        /// <summary>
+        /// Control Tit2_TipoDocEsp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Tit2_TipoDocEsp;
         
         /// <summary>
         /// Control Tit2_NumDoc.

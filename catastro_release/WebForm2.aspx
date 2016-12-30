@@ -18,7 +18,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="section">
+                        <tr class="sections">
                             <td>
                                 <!--<input runat="server" class="form-control" id="Ubi_CodViaHTML" maxlength="6" />-->
                                 <asp:TextBox runat="server" CssClass="form-control" ID="CodViaUbi" MaxLength="6"></asp:TextBox>
