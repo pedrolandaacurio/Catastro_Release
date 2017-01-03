@@ -679,6 +679,15 @@ namespace catastro_release.Fichas {
         protected global::System.Web.UI.WebControls.DropDownList CondTit;
         
         /// <summary>
+        /// Control CondTitEspec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CondTitEspec;
+        
+        /// <summary>
         /// Control FormaAdquisicion.
         /// </summary>
         /// <remarks>
@@ -686,6 +695,15 @@ namespace catastro_release.Fichas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList FormaAdquisicion;
+        
+        /// <summary>
+        /// Control FormaAdquisicionEspec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FormaAdquisicionEspec;
         
         /// <summary>
         /// Control FechaAdquisicion.
@@ -704,6 +722,15 @@ namespace catastro_release.Fichas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CondEspPred;
+        
+        /// <summary>
+        /// Control CondEspPredEsp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CondEspPredEsp;
         
         /// <summary>
         /// Control NumResExoPred.
@@ -758,6 +785,15 @@ namespace catastro_release.Fichas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList PredioEn;
+        
+        /// <summary>
+        /// Control PredioEnEspec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PredioEnEspec;
         
         /// <summary>
         /// Control CodUso.
@@ -1397,6 +1433,15 @@ namespace catastro_release.Fichas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList CondDeclarante;
+        
+        /// <summary>
+        /// Control CondDeclaranteEspec.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CondDeclaranteEspec;
         
         /// <summary>
         /// Control In_TDLit.

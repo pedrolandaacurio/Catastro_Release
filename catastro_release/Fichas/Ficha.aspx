@@ -16,6 +16,31 @@
         var dvPassport = document.getElementById("Tit2_TipoDoc_Esp");
         dvPassport.style.display = ddlPassport.value == "8" ? "block" : "none";
     }
+    function ShowHideDiv4() {
+        var ddlPassport = document.getElementById("MainContent_CondTit");
+        var dvPassport = document.getElementById("CondTitEsp");
+        dvPassport.style.display = ddlPassport.value == "07" ? "block" : "none";
+    }
+    function ShowHideDiv5() {
+        var ddlPassport = document.getElementById("MainContent_FormaAdquisicion");
+        var dvPassport = document.getElementById("FormaAdquisicion_Esp");
+        dvPassport.style.display = ddlPassport.value == "13" ? "block" : "none";
+    }
+    function ShowHideDiv6() {
+        var ddlPassport = document.getElementById("MainContent_CondEspPred");
+        var dvPassport = document.getElementById("CondEspPred_Esp");
+        dvPassport.style.display = ddlPassport.value == "04" ? "block" : "none";
+    }
+    function ShowHideDiv7() {
+        var ddlPassport = document.getElementById("MainContent_PredioEn");
+        var dvPassport = document.getElementById("PredioEn_Espec");
+        dvPassport.style.display = ddlPassport.value == "13" ? "block" : "none";
+    }
+    function ShowHideDiv8() {
+        var ddlPassport = document.getElementById("MainContent_CondDeclarante");
+        var dvPassport = document.getElementById("CondDeclarante_Espec");
+        dvPassport.style.display = ddlPassport.value == "06" ? "block" : "none";
+    }
 </script>
    
     <div class="form-horizontal">
@@ -191,27 +216,6 @@
                         </div>
                     </div>
                    
-                        <!--script type="text/javascript">
-                            function ShowHideDiv() {
-                                var TipoInterior = document.getElementById("TipoInterior");
-                                var TipoInterior_Esp = document.getElementById("TipoInterior_Esp");
-                                TipoInterior_Esp.style.display = TipoInterior.value == "Y" ? "block" : "none";
-                            }
-
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-                    <script type="text/javascript">
-                        $(function () {
-                            $("#Ubi_TipoInterior").change(function () {
-                                if ($(this).val() == "Y") {
-                                    $("#TipoInterior_Esp").show();
-                                } else {
-                                    $("#TipoInterior_Esp").hide();
-                                }
-                            });
-                        });
-                    </script>
-                        </script-->
-                        
                     <div class="form-group" id="TipoInterior">                        
                         <asp:Label runat="server" AssociatedControlID="Ubi_TipoInterior" CssClass="control-label col-md-2"><span class="badge">16</span> Tipo de Interior</asp:Label>
                         
@@ -621,7 +625,7 @@
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="CondTit" CssClass="control-label col-md-2"><span class="badge">46</span> Condición Especial del Titular</asp:Label>
                         <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="CondTit" CssClass="form-control">
+                            <asp:DropDownList runat="server" ID="CondTit" CssClass="form-control" onchange = "ShowHideDiv4()">
                                 <asp:ListItem Value="01" Text="Propietario Único"></asp:ListItem>
                                 <asp:ListItem Value="02" Text="Sucesión Intestada"></asp:ListItem>
                                 <asp:ListItem Value="03" Text="Poseedor"></asp:ListItem>
@@ -631,10 +635,15 @@
                                 <asp:ListItem Value="07" Text="Otros..."></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <!--Aqui debe ir un textbox de especificacion-->
+                        <div class="col-md-6" id="CondTitEsp" style="display: none">
+                            <asp:TextBox runat="server" ID="CondTitEspec" CssClass="form-control"></asp:TextBox>
+                        </div>
+                                               
+                    </div>
+                    <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="FormaAdquisicion" CssClass="control-label col-md-2"><span class="badge">47</span> Forma de Adquisición</asp:Label>
                         <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="FormaAdquisicion" CssClass="form-control">
+                            <asp:DropDownList runat="server" ID="FormaAdquisicion" CssClass="form-control" onchange = "ShowHideDiv5()">
                                 <asp:ListItem Value="01" Text="Compra Venta"></asp:ListItem>
                                 <asp:ListItem Value="02" Text="Anticipo Legítima"></asp:ListItem>
                                 <asp:ListItem Value="03" Text="Testamento"></asp:ListItem>
@@ -650,21 +659,29 @@
                                 <asp:ListItem Value="13" Text="Otro.."></asp:ListItem>
                             </asp:DropDownList>
                         </div>
-                        <!--Aqui debe ir un textbox de especificacion-->
+                        <div class="col-md-6" id="FormaAdquisicion_Esp" style="display: none">
+                            <asp:TextBox runat="server" ID="FormaAdquisicionEspec" CssClass="form-control"></asp:TextBox>
+                        </div>
+                       
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="FechaAdquisicion" CssClass="control-label col-md-2"><span class="badge">48</span> Fecha de Adquisición</asp:Label>
                         <div class="col-md-4">
                             <asp:TextBox runat="server" ID="FechaAdquisicion" CssClass="form-control" TextMode="Date"></asp:TextBox>
-                        </div>
+                        </div>                        
+                    </div>
+                    <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="CondEspPred" CssClass="control-label col-md-2"><span class="badge">49</span> Condición Especial del Predio <small class="small">(Exoneración)</small></asp:Label>
                         <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="CondEspPred" CssClass="form-control">
+                            <asp:DropDownList runat="server" ID="CondEspPred" CssClass="form-control" onchange = "ShowHideDiv6()">
                                 <asp:ListItem Value="01" Text="Monumento histórico"></asp:ListItem>
                                 <asp:ListItem Value="02" Text="Predio rústico"></asp:ListItem>
                                 <asp:ListItem Value="03" Text="Sistema de ayuda de aeronavegación"></asp:ListItem>
                                 <asp:ListItem Value="04" Text="Otros"></asp:ListItem>
                             </asp:DropDownList>
+                        </div>
+                        <div class="col-md-6" id="CondEspPred_Esp" style="display: none">
+                            <asp:TextBox runat="server" ID="CondEspPredEsp" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
@@ -725,8 +742,8 @@
                             </asp:DropDownList>
                         </div>
                         <asp:Label runat="server" AssociatedControlID="PredioEn" CssClass="control-label col-md-2"><span class="badge">55</span> Predio Catastral en:</asp:Label>
-                        <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="PredioEn" CssClass="form-control">
+                        <div class="col-md-2">
+                            <asp:DropDownList runat="server" ID="PredioEn" CssClass="form-control" onchange = "ShowHideDiv7()">
                                 <asp:ListItem Value="01" Text="Galería"></asp:ListItem>
                                 <asp:ListItem Value="02" Text="Mercado"></asp:ListItem>
                                 <asp:ListItem Value="03" Text="Campo Ferial"></asp:ListItem>
@@ -740,7 +757,11 @@
                                 <asp:ListItem Value="11" Text="Aire"></asp:ListItem>
                                 <asp:ListItem Value="12" Text="Predio en Edificio"></asp:ListItem>
                                 <asp:ListItem Value="13" Text="Otros"></asp:ListItem>
-                            </asp:DropDownList>
+                            </asp:DropDownList>                      
+                            </div>
+                         <div class="col-md-2" id="PredioEn_Espec" style="display: none">
+                            <asp:TextBox runat="server" ID="PredioEnEspec" CssClass="form-control"></asp:TextBox>
+
                         </div>
                     </div>
                     <div class="form-group">
@@ -1363,14 +1384,17 @@
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="CondDeclarante" CssClass="control-label col-md-2"><span class="badge">114</span> Condición de Declarante</asp:Label>
                         <div class="col-md-4">
-                            <asp:DropDownList runat="server" ID="CondDeclarante" CssClass="form-control">
+                            <asp:DropDownList runat="server" ID="CondDeclarante" CssClass="form-control" onchange = "ShowHideDiv8()">
                                 <asp:ListItem Value="01" Text="Titular Catastral"></asp:ListItem>
                                 <asp:ListItem Value="02" Text="Representante Legal"></asp:ListItem>
                                 <asp:ListItem Value="03" Text="Arrendatario"></asp:ListItem>
                                 <asp:ListItem Value="04" Text="Familiar"></asp:ListItem>
                                 <asp:ListItem Value="05" Text="Vecino"></asp:ListItem>
                                 <asp:ListItem Value="06" Text="Otros"></asp:ListItem>
-                            </asp:DropDownList>
+                            </asp:DropDownList>   
+                        </div>
+                        <div class="col-md-6" id="CondDeclarante_Espec" style="display: none">
+                            <asp:TextBox runat="server" ID="CondDeclaranteEspec" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="panel panel-default" id="Lit_Ident">
